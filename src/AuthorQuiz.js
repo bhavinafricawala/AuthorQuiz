@@ -16,7 +16,6 @@ function AuthorQuiz({ turnData, highlight, onAnswerSelected }) {
         onAnswerSelected={onAnswerSelected}
       />
       <Continue />
-      <div>sadsd</div>
       <Footer />
     </div>
   );
