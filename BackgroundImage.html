@@ -22,6 +22,8 @@ body {
     width: 100%;
     max-width: 960px;
     padding: 0 15px;
+    grid-template-columns: 15fr 60fr 15fr;
+    -ms-grid-columns:15fr 60fr 15fr;
 
 }
 
@@ -30,15 +32,22 @@ h1 {
     padding: 0;
     font-size: 50px;
     text-align: center;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/-1;
 }
 
 p {
     margin: 0 0 30px 0;
     font-size: 30px;
     line-height: 1.5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 2/ span 1;    
 }
 
 .fullscreen-bg {
+    
     position: fixed;
     top: 0;
     right: 0;
@@ -46,6 +55,8 @@ p {
     left: 0;
     overflow: hidden;
     z-index: -100;
+    filter:grayscale(50%) opacity(80%);
+    
 }
 
 .fullscreen-bg__video {
@@ -85,7 +96,8 @@ p {
 
     <div class="fullscreen-bg">
         <video loop muted autoplay class="fullscreen-bg__video">
-            <source src="Motorcycle.mp4" type="video/mp4">      
+            <source src="Motorcycle.mp4" type="video/mp4">
+            
         </video>
     </div>
 
